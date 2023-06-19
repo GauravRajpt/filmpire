@@ -1,28 +1,15 @@
-// eslintrc.js
 module.exports = {
-  env: {
-    browser: true,
-    es6: true,
-  },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-  ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
+  parser: "babel-eslint",
   parserOptions: {
+    sourceType: "module",
+    allowImportExportEverywhere: false,
     ecmaFeatures: {
-      jsx: true,
+      globalReturn: false,
     },
-    ecmaVersion: 2018,
-    sourceType: 'module',
+    babelOptions: {
+      configFile: "path/to/config.js",
+    },
   },
-  parser: 'babel-eslint',
-  plugins: [
-    'react',
-  ],
   rules: {
     'import/extensions': 0,
     'react/prop-types': 0,
@@ -82,4 +69,8 @@ module.exports = {
       },
     ],
   },
+  
 };
+ 
+
+
